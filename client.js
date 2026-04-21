@@ -28,6 +28,10 @@ Object.keys(client.CalculatorService.CalculatorPort));
   // Test Power
  const powResult = await client.PowerAsync({ a: 2, b: 4 });
  console.log(`Power: 2 ^ 4 = ${powResult[0].result}`);
+  // Test Pow negative
+ powResult2 = await client.PowerAsync({ a: 2, b: -2 });
+ console.log(`Power: 2 ^ -2 = ${powResult2[0].result}`);
+
 
  // Test Division par zéro (erreur)
  console.log('\n--- Test erreur: Division par zéro ---');

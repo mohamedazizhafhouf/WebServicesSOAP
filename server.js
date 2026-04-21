@@ -61,7 +61,10 @@ const calculatorService = {
 
    // Opération Power
  Power: function(args) {
- const result = parseFloat(args.a) ** parseFloat(args.b);
+ if (parseFloat(args.b)<0){
+    const result = 1/(Math.pow(parseFloat(args.a),parseFloat(args.b)));
+ }
+ const result = Math.pow(parseFloat(args.a),parseFloat(args.b));
  console.log(`Power: ${args.a} ^ ${args.b} = ${result}`);
  return { result: result };
  }
