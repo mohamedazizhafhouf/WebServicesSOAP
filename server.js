@@ -57,7 +57,15 @@ const calculatorService = {
  const result = parseFloat(args.a) % parseFloat(args.b);
  console.log(`Modulo: ${args.a} % ${args.b} = ${result}`);
  return { result: result };
+ }, 
+
+   // Opération Power
+ Power: function(args) {
+ const result = parseFloat(args.a) ** parseFloat(args.b);
+ console.log(`Power: ${args.a} ^ ${args.b} = ${result}`);
+ return { result: result };
  }
+
  }
  }
 };
