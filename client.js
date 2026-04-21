@@ -24,6 +24,11 @@ Object.keys(client.CalculatorService.CalculatorPort));
  // Test Modulo
  const modResult = await client.ModuloAsync({ a: 10, b: 3 });
  console.log(`Modulo: 10 MOD 3 = ${modResult[0].result}`);
+
+  // Test Power
+ const powResult = await client.PowerAsync({ a: 2, b: 4 });
+ console.log(`Power: 2 ^ 4 = ${powResult[0].result}`);
+
  // Test Division par zéro (erreur)
  console.log('\n--- Test erreur: Division par zéro ---');
  try {
